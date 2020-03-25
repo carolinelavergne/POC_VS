@@ -1,0 +1,22 @@
+{
+  "name": "poc_1",
+  "version": "1.0.0",
+  "description": "poc 1",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "cypress": "^4.2.0",
+    "cypress-cucumber-preprocessor": "^1.19.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "step_definitions": "cypress/features/step_definitions/"
+  },
+  "scripts": {
+    "start": "node build/dev-server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "test"
+  },
+  "author": "caro"
+}
