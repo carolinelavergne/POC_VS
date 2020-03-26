@@ -7,4 +7,3 @@
     "videosFolder": "cypress/dist/videos",
     "testFiles": "**/*.feature"
 }
-  

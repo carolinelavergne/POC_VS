@@ -6,10 +6,10 @@
   "dependencies": {},
   "devDependencies": {
     "cypress": "^4.2.0",
-    "cypress-cucumber-preprocessor": "^1.19.2"
+    "cypress-cucumber-preprocessor": "^2.0.1"
   },
   "cypress-cucumber-preprocessor": {
-    "step_definitions": "cypress/features/step_definitions/"
+    "nonGlobalStepDefinitions": true
   },
   "scripts": {
     "start": "node build/dev-server.js"

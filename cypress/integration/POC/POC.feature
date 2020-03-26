@@ -5,5 +5,5 @@ Feature: DEMO POC 1
    Scenario: Test quick search
 
    Given the climaginaire WebSite
-   #When I search for "Karmen"
-   #Then the search retrieve 1 result for "Karmen"
+   When I search for "Karmen"
+   Then the search retrieve "1" result
