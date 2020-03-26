@@ -12,9 +12,10 @@ This README would normally document whatever steps are necessary to get your app
 Prerequisites are:
 - get a vsCode application installed : https://code.visualstudio.com/download
 - get NodeJs installed : https://nodejs.org/en/download/
+- get POC_VS project in local : git clone https://github.com/carolinelavergne/POC_VS.git
 
 ## VS code ##
-Open vsCode, import POC_VS project (https://github.com/carolinelavergne/POC_VS.git) 
+Open vsCode, import folder POC_VS 
 
 ## Cypress ##
 Install Cypress, in the terminal window, type : 
