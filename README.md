@@ -18,24 +18,24 @@ Open vsCode, import POC_VS project (https://github.com/carolinelavergne/POC_VS.g
 
 ## Cypress ##
 Install Cypress, in the terminal window, type : 
-	cd /your/project/path (ie the POC_VS path: C:\workspace\POCs\POC_VS)
-	npm install cypress --save-dev
+* cd /your/project/path (ie the POC_VS path: C:\workspace\POCs\POC_VS)
+* npm install cypress --save-dev
 => a package-lock.json file is created
 
 Then, in the terminal window, type : 
-	npm init
+* npm init
 => a package.json file is created
 
 ## Cucumber ##
 Install cucumber : Ctrl+shitf+P and search for "install extension" then for "Cucumber (Gherkin) Full Support"
 
 Install cypress-cucumber-preprocessor, in the terminal window, type : 
-	npm install --save-dev cypress-cucumber-preprocessor@2.1.0
-	npm install cypress-cucumber-preprocessor@2.1.0
+* npm install --save-dev cypress-cucumber-preprocessor@2.1.0
+* npm install cypress-cucumber-preprocessor@2.1.0
 
 ## Execute Tests ##
 In the terminal window, type : 
-	./node_modules/.bin/cypress open
+* ./node_modules/.bin/cypress open
 => a new window is opened with "POC.feature" file
 
 Click on POC.feature, the test is running
