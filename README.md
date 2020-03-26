@@ -18,6 +18,7 @@ Prerequisites are:
 Open vsCode, import folder POC_VS 
 
 ## Cypress ##
+(only if there is no imported project)
 Install Cypress, in the terminal window, type : 
 * cd /your/project/path (ie the POC_VS path: C:\workspace\POCs\POC_VS)
 * npm install cypress --save-dev
