@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "poc 1",
   "main": "index.js",
-  "dependencies": {},
   "devDependencies": {
     "cypress": "^4.2.0",
     "cypress-cucumber-preprocessor": "^2.0.1"
@@ -14,9 +13,5 @@
   "scripts": {
     "start": "node build/dev-server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "test"
-  },
-  "author": "caro"
+  "author": "yourName"
 }
