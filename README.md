@@ -26,6 +26,7 @@ Prerequisites are:
 
 
 ## Github ##
+*(only if you want a versining project)*
 
 *(only if from an existing project)* 
 
@@ -52,7 +53,7 @@ Prerequisites are:
 
 ## VS code ##
 
-Open vsCode, open the folder : [File > Open folder...] and select the folder POC_VS
+Open vsCode, open the folder : [File > Open folder...] and select the folder POC_VS *(if you skip the Github part, you have to create a folder named POC_VS)*
 
 *(only if from scratch)* : the project is empty
 
