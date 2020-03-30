@@ -108,7 +108,11 @@ Information are necessary to initialize package.json but can be edited later. Do
 - update the settings.json file with this content :
 ```
 	{
-    	"git.ignoreLimitWarning": true
+		"cucumberautocomplete.steps": [
+			"cypress/integration/**/*.js"
+		],
+		"cucumberautocomplete.syncfeatures": "cypress/integration/*feature",
+		"cucumberautocomplete.strictGherkinCompletion": true
 	}
 ```
 
