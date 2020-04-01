@@ -21,8 +21,5 @@
     "start_wip": "./node_modules/.bin/cypress run -e TAGS=@wip --spec 'cypress/integration/**/*.features'",
     "start_all": "./node_modules/.bin/cypress run --spec 'cypress/integration/**/*.features'"
   },
-  "bin": {
-    "cypress-tags": "cypress-tags.js"
-  },
   "author": "yourName"
 }
