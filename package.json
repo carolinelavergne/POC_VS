@@ -18,8 +18,8 @@
   },
   "scripts": {
     "start": "./node_modules/.bin/cypress open",
-    "start_wip": "./node_modules/.bin/cypress run -e TAGS=@wip --spec 'cypress/integration/**/*.features'",
-    "start_all": "./node_modules/.bin/cypress run --spec 'cypress/integration/**/*.features'"
+    "start_wip": "./node_modules/.bin/cypress run --browser chrome -e TAGS=@wip --spec 'cypress/integration/**/*.features'",
+    "start_all": "./node_modules/.bin/cypress run --browser chrome --spec 'cypress/integration/**/*.features'"
   },
   "author": "yourName"
 }
