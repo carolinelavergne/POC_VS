@@ -1,17 +1,28 @@
 {
-  "name": "poc_1",
+  "name": "poc_cypress",
   "version": "1.0.0",
-  "description": "poc 1",
+  "description": "poc cypress",
   "main": "index.js",
   "devDependencies": {
     "cypress": "^4.2.0",
     "cypress-cucumber-preprocessor": "^2.0.1"
   },
   "cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": true
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
   },
   "scripts": {
-    "start": "node build/dev-server.js"
+    "start": "./node_modules/.bin/cypress open",
+    "start_wip": "./node_modules/.bin/cypress run -e TAGS=@wip --spec 'cypress/integration/**/*.features'",
+    "start_all": "./node_modules/.bin/cypress run --spec 'cypress/integration/**/*.features'"
+  },
+  "bin": {
+    "cypress-tags": "cypress-tags.js"
   },
   "author": "yourName"
 }

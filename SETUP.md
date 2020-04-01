@@ -9,28 +9,34 @@ This README describes how install a projet on vsCode with cypress/cucumber :
 
 To distinguish the two ways, each mandatory step will be specified as appropriate.
 
-### What is this repository for? ###
+## What is this repository for? ##
 
 - This is a POC for vsCode - cypress - cucumber - github
 - Version 1.0
 
-
-### How do I get set up? ###
+## How do I get set up? ##
 
 Prerequisites are:
+
+- a desktop with windows
 
 - get a vsCode application installed : https://code.visualstudio.com/download
 
 - get NodeJs installed : https://nodejs.org/en/download/
 
+- get git for windows : https://gitforwindows.org/
 
 
-## Github ##
+### Github ###
 *(only if you want a versining project)*
 
 *(only if from an existing project)* 
 
 1 - get POC_VS project in local :
+
+Create a folder on your desktop : POC_VS
+Do a rigth click and select "git bash here"
+Type (replace username by your account):
 
 ```
 		git clone https://github.com/carolinelavergne/POC_VS.git (gitHub)
@@ -47,11 +53,12 @@ Prerequisites are:
 3 - In Command Prompt [cmd], type :
 
 ```
-		git clone github_url (be on the good location)
+		cd Desktop
+		git clone github_url
 ```
 => The repository POC_VS is on your local
 
-## VS code ##
+### VS code ###
 
 Open vsCode, open the folder : [File > Open folder...] and select the folder POC_VS *(if you skip the Github part, you have to create a folder named POC_VS)*
 
@@ -63,14 +70,14 @@ Open vsCode, open the folder : [File > Open folder...] and select the folder POC
 You can pull, push, add files, commit and push ;) 
 
 
-## Cypress ##
+### Cypress ###
 
 *(All this part "Cypress" is only if from scratch)*
 
 1 - Install Cypress, in the terminal window [Terminal > New Terminal], type : 
 
 ```
-		cd /your/project/path (ie the POC_VS path: C:\workspace\POCs\POC_VS)
+		cd C:\Users\Caroline\Desktop\POC_VS
 		npm install cypress --save-dev
 ```
 
@@ -88,15 +95,15 @@ Information are necessary to initialize package.json but can be edited later. Do
 3 - Update the package.json file with this content :
 ```
 		{
-		  "name": "poc_1",
+		  "name": "poc_cypress",
 		  "version": "1.0.0",
-		  "description": "poc 1",
+		  "description": "poc cypress",
 		  "main": "index.js",
 		  "devDependencies": {
 			"cypress": "^4.2.0"
 		  },
 		  "scripts": {
-			"start": "node build/dev-server.js"
+			"start": "./node_modules/.bin/cypress open"
 		  },
 		  "author": "yourName"
 		}
@@ -122,14 +129,14 @@ You can already execute tests :
 In the terminal window, type : 
 
 ```
-		./node_modules/.bin/cypress open
+		npm start
 ```
 
 All js files contained in the integration folder will be retrieved. 
 Click on the file in which you want to run the tests, the test is running.
 
 
-## Cucumber ##
+### Cucumber ###
 
 1 - Install cucumber : [Ctrl+shitf+P] and search for "install extension" then for "Cucumber (Gherkin) Full Support"
 
@@ -154,9 +161,9 @@ Click on the file in which you want to run the tests, the test is running.
 4 - Update the package.json file with this content : 
 ```
 	{
-	  "name": "poc_1",
+	  "name": "poc_cypress",
 	  "version": "1.0.0",
-	  "description": "poc 1",
+	  "description": "poc cypress",
 	  "main": "index.js",
 	  "devDependencies": {
 		"cypress": "^4.2.0",
@@ -166,17 +173,18 @@ Click on the file in which you want to run the tests, the test is running.
 		"nonGlobalStepDefinitions": true
 	  },
 	  "scripts": {
-		"start": "node build/dev-server.js"
+		"start": "./node_modules/.bin/cypress open"
 	  },
 	  "author": "yourName"
 	}
 ```
 
 5 - Inside the folder integration [POC_VS > cypress > integration] :
-- create a folder POC 
-- create a file POC.js inside this folder ==> this file contains the js code to execute the test
-- create a file POC.feature ==> this file contains the gherkins
-[to get example: https://bitbucket.org/automationteamaltea/pocvscodecypresscucumber/src/master/cypress/integration/POC/]
+- create a folder POC1 
+- create a file POC1.js inside this folder ==> this file contains the js code to execute the test
+- create a file POC1.feature ==> this file contains the gherkins
+(the names of the .feature file, the folder and the main .js file inside the folder are important to execute with succes the test)
+[to get example: https://bitbucket.org/automationteamaltea/pocvscodecypresscucumber/src/master/cypress/integration/POC cucumber/ : POC1/POC1.js and POC1.feature]
 
 6 - Update the file index.js [POC_VS > cypress > plugins] with this content : 
 ```
@@ -187,19 +195,19 @@ Click on the file in which you want to run the tests, the test is running.
 	};
 ```
 
-## Execute Tests ##
+### Execute Tests ###
 
 1 - In the terminal window, type : 
 
 ```
-		./node_modules/.bin/cypress open
+		npm start
 ```
 
-=> a new window is opened with "POC.feature" file.
+=> a new window is opened with "POC1.feature" file.
 
-2 - In this window, click on POC.feature, the test is running.
+2 - In this window, click on POC1.feature, the test is running.
 
 
-### Who do I talk to? ###
+## Who do I talk to? ##
 
 * Repo owner or admin: caroline.lavergne@consort-group.com

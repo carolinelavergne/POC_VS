@@ -1,5 +1,5 @@
 {
     "integrationFolder": "cypress/integration",
     "pluginsFile": "cypress/plugins/index.js",
-    "testFiles": "**/*.feature"
+    "testFiles": "**/*.{feature,features}"
 }
