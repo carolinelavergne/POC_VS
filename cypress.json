@@ -1,5 +1,6 @@
 {
     "integrationFolder": "cypress/integration",
     "pluginsFile": "cypress/plugins/index.js",
-    "testFiles": "**/*.{feature,features}"
+    "testFiles": "**/*.{feature,features}",
+    "chromeWebSecurity": false
 }
