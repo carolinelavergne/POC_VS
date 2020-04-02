@@ -196,22 +196,32 @@ Prerequisites are:
 
 In jenkins : 
 1 - Go to http://localhost:8080/pluginManager/installed, check :
-- NodeJS Plugin 	
+
+- NodeJS Plugin
+
 - Cucumber reports
+
 Click on download and restart jenkins
 
 2 - Go to http://localhost:8080/, create a new item :
-- name it
+
+- name it "pocvscodecypresscucumber"
+
 - select create a new free style project
+
 - In general : check GitHub project and type the git hub url : https://github.com/carolinelavergne/POC_VS/
+
 - In manage code source : check git and type the repository url : https://github.com/carolinelavergne/POC_VS.git (keep */master as branch)
+
 - In build : select shell script and type:
+
 ```
 	npm install
 	npm install cypress --save-dev
 	npm run start_all
 ```
 - In action after build : select cucumber reports, click on "advanced" and type in JSON Reports path: cypress/cucumber-json/
+
 - Save
 
 3 - Go to http://localhost:8080/view/all/job/pocvscodecypresscucumber/ and launch a build
