@@ -150,7 +150,7 @@ The file is empty, it's alright.
 5 - In package.json, add in the object "script" :
 
 ```
-        "start_all": "./node_modules/.bin/cypress run --spec 'cypress/integration/**/*.features'"
+        "start_all": "./node_modules/.bin/cypress run --spec 'cypress/integration/**/*.feature'"
 ```
 
 6 - In the terminal window, type : 
@@ -165,7 +165,7 @@ Usage: when you don't when to run all tests, put the tag @wip on the top of the 
 
 1 - In package.json, add in the object "script" :
 ```
-        "start_wip": "./node_modules/.bin/cypress run -e TAGS=@wip --spec 'cypress/integration/**/*.features'"
+        "start_wip": "./node_modules/.bin/cypress run -e TAGS=@wip --spec 'cypress/integration/**/*.feature'"
 ```
 
 2 - In the terminal window, type : 
