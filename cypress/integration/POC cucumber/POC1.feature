@@ -9,16 +9,16 @@
    Scenario: Result is in first position
       When I search for "climaginaire"
       Then the search retrieves "http://www.climaginaire.com/" as results
-  
+   
    Scenario Outline: Result is in first position
       When I search for "<keyword>"
       Then the search retrieves "<result>" as results
 
    Examples:
-      | keyword         | result                               |
-      | climaginaire    | http://www.climaginaire.com/         |
-      | tintin skyblog  | https://objectif-tintin.skyrock.com/ |
-      | google          | https://www.google.fr/               |
+      | keyword            | result                               |
+      | climaginaire       | http://www.climaginaire.com/         |
+      | tintin skyblog     | https://objectif-tintin.skyrock.com/ |
+      | Commune de Bidon   | https://www.bidon.fr/                |
 
    
    Scenario: The page 2 exists
