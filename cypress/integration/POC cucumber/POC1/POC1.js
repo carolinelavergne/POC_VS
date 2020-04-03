@@ -19,7 +19,7 @@ Then('the search retrieves {string} as results', (keyword) => {
 
 Then('the page {string} exists', (number) => {
   var count = parseFloat(number)+1;
-  cy.get(':nth-child('+count+') > .fl').should('be.visible');
+  cy.get(':nth-child('+ count +') > .fl').should('be.visible');
 });
    
 Then('the following page exists', (dataTable) => {
@@ -27,6 +27,6 @@ Then('the following page exists', (dataTable) => {
   allPageNumbers.forEach(($firstPageNumber) => { 
     let number = $firstPageNumber.page;
     var count = parseFloat(number)+1;
-    cy.get(':nth-child('+ count +') > .fl').should('be.visible');
+    cy.get(':nth-child('+ count +') > .fl').should('be.visible');   
   }); 
 });

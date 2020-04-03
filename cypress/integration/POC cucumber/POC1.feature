@@ -5,11 +5,11 @@
    Background:
       Given the google WebSite
       
-   @wip 
+   @wip
    Scenario: Result is in first position
       When I search for "climaginaire"
       Then the search retrieves "http://www.climaginaire.com/" as results
-   
+  
    Scenario Outline: Result is in first position
       When I search for "<keyword>"
       Then the search retrieves "<result>" as results
@@ -18,8 +18,8 @@
       | keyword         | result                               |
       | climaginaire    | http://www.climaginaire.com/         |
       | tintin skyblog  | https://objectif-tintin.skyrock.com/ |
-      | tricotin        | https://www.tricotin.com/            |
-      | tricotin        | https://www.tricotin.com/faux        |
+      | google          | https://www.google.fr/               |
+      | google          | https://www.google.com/              |
 
    
    Scenario: The page 2 exists
