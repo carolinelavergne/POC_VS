@@ -4,8 +4,8 @@
   "description": "poc cypress",
   "main": "index.js",
   "devDependencies": {
-    "cypress": "^4.2.0",
-    "cypress-cucumber-preprocessor": "^2.0.1"
+    "cypress": "^4.3.0",
+    "cypress-cucumber-preprocessor": "^2.1.0"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true,

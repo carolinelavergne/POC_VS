@@ -144,7 +144,6 @@ Click on the file in which you want to run the tests, the test is running.
 
 ```
 		npm install --save-dev cypress-cucumber-preprocessor@2.1.0
-		npm install cypress-cucumber-preprocessor@2.1.0
 ```
 
 *(All these parts are only if from scratch : 3 -> 6)*
