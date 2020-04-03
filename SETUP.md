@@ -207,6 +207,41 @@ Click on the file in which you want to run the tests, the test is running.
 
 2 - In this window, click on POC1.feature, the test is running.
 
+### Jenkins ###
+
+In jenkins : 
+1 - Go to http://localhost:8080/pluginManager/installed, check :
+
+- NodeJS Plugin
+
+- Cucumber reports
+
+Click on download and restart jenkins
+
+2 - Go to http://localhost:8080/, create a new item :
+
+- name it "pocvscodecypresscucumber"
+
+- select create a pipeline project
+
+- In Pipeline : select "pipeline script from SCM"
+
+- In CSM, select Git. Type the repository url : https://github.com/carolinelavergne/POC_VS.git (keep */master as branch and Jenkinsfile as script path)
+
+- Save
+
+3 - Go to http://localhost:8080/view/all/job/pocvscodecypresscucumber/ and launch a build
+
+4 - Open the build and click on "console output"
+=> you can see the build execution with tests :
+
+![cucumber](https://bitbucket.org/automationteamaltea/pocvscodecypresscucumber/raw/master/images/console.png)
+
+5 - Open the build and click on "Cucumber Report"
+=> you can see a visual report :
+
+![cucumber](https://bitbucket.org/automationteamaltea/pocvscodecypresscucumber/raw/master/images/cucumber-report.png)
+
 
 ## Who do I talk to? ##
 

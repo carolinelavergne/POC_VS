@@ -192,46 +192,17 @@ To save the last execution,
 
 Prerequisites are:
 
--  get jenkins installed : https://jenkins.io/download/thank-you-downloading-windows-installer-stable/
+- get jenkins installed : https://jenkins.io/download/thank-you-downloading-windows-installer-stable/
+- get a pipeline configured => SETUP.md
 
-In jenkins : 
-1 - Go to http://localhost:8080/pluginManager/installed, check :
+1 - Go to http://localhost:8080/view/all/job/pocvscodecypresscucumber/ and launch a build
 
-- NodeJS Plugin
-
-- Cucumber reports
-
-Click on download and restart jenkins
-
-2 - Go to http://localhost:8080/, create a new item :
-
-- name it "pocvscodecypresscucumber"
-
-- select create a new free style project
-
-- In general : check GitHub project and type the git hub url : https://github.com/carolinelavergne/POC_VS/
-
-- In manage code source : check git and type the repository url : https://github.com/carolinelavergne/POC_VS.git (keep */master as branch)
-
-- In build : select shell script and type:
-
-```
-	npm install
-	npm install cypress --save-dev
-	npm run start_all
-```
-- In action after build : select cucumber reports, click on "advanced" and type in JSON Reports path: cypress/cucumber-json/
-
-- Save
-
-3 - Go to http://localhost:8080/view/all/job/pocvscodecypresscucumber/ and launch a build
-
-4 - Open the build and click on "console output"
+2 - Open the build and click on "console output"
 => you can see the build execution with tests :
 
 ![cucumber](https://bitbucket.org/automationteamaltea/pocvscodecypresscucumber/raw/master/images/console.png)
 
-4 - Open the build and click on "Cucumber Report"
+3 - Open the build and click on "Cucumber Report"
 => you can see a visual report :
 
 ![cucumber](https://bitbucket.org/automationteamaltea/pocvscodecypresscucumber/raw/master/images/cucumber-report.png)
