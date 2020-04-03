@@ -231,11 +231,6 @@ The content of this file is jenkins step :
 		pipeline {
 			agent any
 			stages {
-				stage("Checkout") {
-					steps {
-						git 'https://github.com/carolinelavergne/POC_VS.git'
-					}
-				}
 				stage("Npm package installation") {
 					steps {
 						bat label: 'install NPM package', script: 'npm install'
