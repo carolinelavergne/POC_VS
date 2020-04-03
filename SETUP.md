@@ -140,20 +140,20 @@ Click on the file in which you want to run the tests, the test is running.
 
 1 - Install cucumber : [Ctrl+shitf+P] and search for "install extension" then for "Cucumber (Gherkin) Full Support"
 
+*(All these parts are only if from scratch : 2 -> 6)*
+
 2 - Install cypress-cucumber-preprocessor, in the terminal window, type : 
 
 ```
 		npm install --save-dev cypress-cucumber-preprocessor@2.1.0
 ```
 
-*(All these parts are only if from scratch : 3 -> 6)*
-
 3 - Update the cypress.json file with this content :
 ```
 	{
-    	"integrationFolder": "cypress/integration",
-    	"pluginsFile": "cypress/plugins/index.js",
-    	"testFiles": "**/*.feature"
+	  "integrationFolder": "cypress/integration",
+	  "pluginsFile": "cypress/plugins/index.js",
+	  "testFiles": "**/*.feature"
 	}
 ```
 
