@@ -19,7 +19,6 @@
       | climaginaire    | http://www.climaginaire.com/         |
       | tintin skyblog  | https://objectif-tintin.skyrock.com/ |
       | google          | https://www.google.fr/               |
-      | google          | https://www.google.com/              |
 
    
    Scenario: The page 2 exists

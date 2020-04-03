@@ -18,7 +18,7 @@
   },
   "scripts": {
     "start": "./node_modules/.bin/cypress open",
-    "start_wip": "./node_modules/.bin/cypress run --headless --browser chrome -e TAGS=@wip --spec 'cypress/integration/**/POC1.feature'",
+    "start_wip": "./node_modules/.bin/cypress run --headless --browser chrome -e TAGS=@wip --spec 'cypress/integration/**/*.feature'",
     "start_all": "./node_modules/.bin/cypress run --headless --browser chrome --spec 'cypress/integration/**/*.feature'",
     "start_ci": "./node_modules/.bin/cypress run --headless --browser chrome --spec 'cypress/integration/**/*.feature'"
   },
