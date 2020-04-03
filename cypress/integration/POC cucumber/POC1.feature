@@ -5,7 +5,7 @@
    Background:
       Given the google WebSite
       
-   @wip   
+   @wip 
    Scenario: Result is in first position
       When I search for "climaginaire"
       Then the search retrieves "http://www.climaginaire.com/" as results
@@ -21,7 +21,19 @@
       | tricotin        | https://www.tricotin.com/            |
       | tricotin        | https://www.tricotin.com/faux        |
 
-
-   Scenario: There are lots of result
+   
+   Scenario: The page 2 exists
       When I search for "climaginaire"
       Then the page "2" exists
+  
+   Scenario: There are lots of result
+      When I search for "climaginaire"
+      Then the following page exists
+         | page |
+         |   2  |
+         |   3  |
+         |   4  |
+         |   5  |
+         |   6  |
+         |   7  |
+         |   8  |

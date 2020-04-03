@@ -39,33 +39,47 @@ In the feature file, the test is written in Gherkin langage: https://cucumber.io
 
 Example : POC1.feature
 ```	  
-     Feature: DEMO POC 1
+	Feature: DEMO POC 1
 
-   This feature is created for a demo
+   	This feature is created for a demo
 
-   Background:
-      Given the google WebSite
+   	Background:
+      	Given the google WebSite
       
-   @wip   
-   Scenario: Result is in first position
-      When I search for "climaginaire"
-      Then the search retrieves "http://www.climaginaire.com/" as results
-   
-   Scenario Outline: Result is in first position
-      When I search for "<keyword>"
-      Then the search retrieves "<result>" as results
+	@wip 
+	Scenario: Result is in first position
+		When I search for "climaginaire"
+		Then the search retrieves "http://www.climaginaire.com/" as results
+	
+	Scenario Outline: Result is in first position
+		When I search for "<keyword>"
+		Then the search retrieves "<result>" as results
 
-   Examples:
-      | keyword         | result                               |
-      | climaginaire    | http://www.climaginaire.com/         |
-      | tintin skyblog  | https://objectif-tintin.skyrock.com/ |
-      | tricotin        | https://www.tricotin.com/            |
+	Examples:
+		| keyword         | result                               |
+		| climaginaire    | http://www.climaginaire.com/         |
+		| tintin skyblog  | https://objectif-tintin.skyrock.com/ |
+		| tricotin        | https://www.tricotin.com/            |
+		| tricotin        | https://www.tricotin.com/faux        |
 
-
-   Scenario: There are lots of result
-      When I search for "climaginaire"
-      Then the page "2" exists
+	
+	Scenario: The page 2 exists
+		When I search for "climaginaire"
+		Then the page "2" exists
+	
+	Scenario: There are lots of result
+		When I search for "climaginaire"
+		Then the following page exists
+			| page |
+			|   2  |
+			|   3  |
+			|   4  |
+			|   5  |
+			|   6  |
+			|   7  |
+			|   8  |
 ```
+Only used keywords in this poc are explaned. There are lots of keyword : more information here : https://cucumber.io/docs/gherkin/reference/
 
 **_Feature_**: The first primary keyword in a Gherkin document must always be Feature, followed by a : and a short text that describes the feature. You can add free-form text underneath Feature to add more description.
 
@@ -77,9 +91,11 @@ Examples follow this same pattern:
 - Describe an event (When steps)
 - Describe an expected outcome (Then steps)
 
-**_@wip_**: The tag is used to execute only tagged scenarios in a feature (more explanation below)
-
 **_Scenario Outline & Examples_**: Execute the scenario once for each row in the Example.
+
+**_@ (tags)_**: The tag is used to execute only tagged scenarios in a feature (more explanation below)
+
+**_| (data tables)_**: Data Tables are handy for passing a list of values to a step definition.
 
 #### .features ####
 By creating a file All.features, you can execute all tests in all .feature in one time. (more explanation below)
@@ -117,6 +133,15 @@ Then each Gherkins sentence has an associated js code :
 	Then('the page {string} exists', (number) => {
 		var count = parseFloat(number)+1;
 		cy.get(':nth-child(' + count + ') > .fl').should('be.visible');
+	});
+
+	Then('the following page exists', (dataTable) => {
+		let allPageNumbers = dataTable.hashes();
+		allPageNumbers.forEach(($firstPageNumber) => { 
+			let number = $firstPageNumber.page;
+			var count = parseFloat(number)+1;
+			cy.get(':nth-child('+ count +') > .fl').should('be.visible');
+		}); 
 	});
 ```
 

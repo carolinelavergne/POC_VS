@@ -22,3 +22,11 @@ Then('the page {string} exists', (number) => {
   cy.get(':nth-child('+count+') > .fl').should('be.visible');
 });
    
+Then('the following page exists', (dataTable) => {
+  let allPageNumbers = dataTable.hashes();
+  allPageNumbers.forEach(($firstPageNumber) => { 
+    let number = $firstPageNumber.page;
+    var count = parseFloat(number)+1;
+    cy.get(':nth-child('+ count +') > .fl').should('be.visible');
+  }); 
+});
