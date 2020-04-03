@@ -39,19 +39,29 @@ In the feature file, the test is written in Gherkin langage: https://cucumber.io
 
 Example : POC1.feature
 ```	  
-  Feature: DEMO POC 1
+     Feature: DEMO POC 1
 
    This feature is created for a demo
 
    Background:
       Given the google WebSite
       
-   @wip
+   @wip   
    Scenario: Result is in first position
       When I search for "climaginaire"
       Then the search retrieves "http://www.climaginaire.com/" as results
    
- 
+   Scenario Outline: Result is in first position
+      When I search for "<keyword>"
+      Then the search retrieves "<result>" as results
+
+   Examples:
+      | keyword         | result                               |
+      | climaginaire    | http://www.climaginaire.com/         |
+      | tintin skyblog  | https://objectif-tintin.skyrock.com/ |
+      | tricotin        | https://www.tricotin.com/            |
+
+
    Scenario: There are lots of result
       When I search for "climaginaire"
       Then the page "2" exists
@@ -68,6 +78,8 @@ Examples follow this same pattern:
 - Describe an expected outcome (Then steps)
 
 **_@wip_**: The tag is used to execute only tagged scenarios in a feature (more explanation below)
+
+**_Scenario Outline & Examples_**: Execute the scenario once for each row in the Example.
 
 #### .features ####
 By creating a file All.features, you can execute all tests in all .feature in one time. (more explanation below)
