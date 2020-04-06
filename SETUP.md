@@ -230,6 +230,9 @@ In vsCode :
 
 ### Jenkins ###
 _________________________________________________________________
+Prerequisites are:
+
+Get jenkins installed : https://jenkins.io/download/thank-you-downloading-windows-installer-stable/
 
 In jenkins : 
 1 - Go to http://localhost:8080/pluginManager/installed, check :

@@ -228,7 +228,6 @@ To save the last execution,
 
 Prerequisites are:
 
-- Get jenkins installed : https://jenkins.io/download/thank-you-downloading-windows-installer-stable/
 - Get a pipeline configured => SETUP.md
 
 1 - Go to http://localhost:8080/view/all/job/pocvscodecypresscucumber/ and launch a build
