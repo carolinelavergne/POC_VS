@@ -23,20 +23,19 @@ Prerequisites are:
 - Get git for windows : https://gitforwindows.org/ (click on download)
 
 
-The installation documentation is divided into two parts, depending on whether you install the project from scratch or if you start from the project available on github or bitbucket.
+The installation documentation is divided into two parts, depending on whether you install the project from scratch or if you start from the project available on github.
 
-### Installation from an existing project ###
+### Installation from Github project ###
 _________________________________________________________________
 
 #### Github ####
 1 - Get POC_VS project in local :
 
 On your desktop, do a rigth click and select "git bash here"
-Type one of this 2 commands (replace USERNAME by your account):
+Type one of these 2 commands (replace USERNAME by your account):
 
 ```
-		git clone https://github.com/carolinelavergne/POC_VS.git (gitHub)
-		git clone https://USERNAME@bitbucket.org/automationteamaltea/pocvscodecypresscucumber.git (bitbucket)
+		git clone https://github.com/carolinelavergne/POC_VS.git
 ```
 => The project POC_VS is on your desktop, you can move the folder if you want
 
@@ -52,16 +51,17 @@ You can pull, push, add files, commit and push ;)
 #### Cypress ####
 *(If Cypress executable not found at : C:\Users\USERNAME\AppData\Local\Cypress\Cache\CYPRESS_VERSION\Cypress\Cypress.Exe)*
 
-1 - Install Cypress, in the terminal window [Terminal > New Terminal], type : 
+In vsCode :
+1 - Install Cypress : in the terminal window [Terminal > New Terminal], type : 
 
 ```
-		cd C:\[...]\POC_VS
 		npm install cypress --save-dev
 ```
 
 
 #### Cucumber ####
-1 - Install cucumber : [Ctrl+shitf+P] and search for "Extensions: Install extensions" then for "Cucumber (Gherkin) Full Support" [VSCode Cucumber (Gherkin) Language Support + Format + Steps/PageObjects Autocomplete]
+In vsCode :
+1 - Install Cucumber : do [Ctrl+shitf+P] and search for "Extensions: Install extensions" then for "Cucumber (Gherkin) Full Support" [VSCode Cucumber (Gherkin) Language Support + Format + Steps/PageObjects Autocomplete]
 
 
 
@@ -95,7 +95,8 @@ You can pull, push, add files, commit and push ;)
 
 
 #### Cypress ####
-1 - Install Cypress, in the terminal window [Terminal > New Terminal], type : 
+In vsCode :
+1 - Install Cypress : in the terminal window [Terminal > New Terminal], type : 
 
 ```
 		npm install cypress --save-dev
@@ -156,9 +157,10 @@ In the terminal window, type :
 
 
 #### Cucumber ####
+In vsCode :
 1 - Install cucumber : [Ctrl+shitf+P] and search for "Extensions: Install extensions" then for "Cucumber (Gherkin) Full Support"
 
-2 - Install cypress-cucumber-preprocessor, in the terminal window, type : 
+2 - Install cypress-cucumber-preprocessor : in the terminal window [Terminal > New Terminal], type : 
 
 ```
 		npm install --save-dev cypress-cucumber-preprocessor@2.1.0
@@ -199,7 +201,7 @@ In the terminal window, type :
 - Create a file POC1.js inside this folder ==> this file contains the js code to execute the test
 - Create a file POC1.feature ==> this file contains the gherkins
 (the names of the .feature file, the folder and the main .js file inside the folder are important to execute with succes the test)
-[to get example: https://bitbucket.org/automationteamaltea/pocvscodecypresscucumber/src/master/cypress/integration/POC cucumber/ : POC1/POC1.js and POC1.feature]
+[to get example: https://github.com/carolinelavergne/POC_VS/tree/master/cypress/integration/POC cucumber/ : POC1/POC1.js and POC1.feature]
 
 6 - Update the file index.js [POC_VS > cypress > plugins] with this content : 
 ```
@@ -214,7 +216,8 @@ In the terminal window, type :
 ### Execute Tests ###
 _________________________________________________________________
 
-1 - In the terminal window, type : 
+In vsCode :
+1 - In the terminal window [Terminal > New Terminal], type : 
 
 ```
 		npm start
@@ -298,12 +301,12 @@ The content of this file is jenkins step :
 4 - Open the build and click on "console output"
 => You can see the build execution with tests :
 
-![cucumber](https://bitbucket.org/automationteamaltea/pocvscodecypresscucumber/raw/master/images/console.png)
+![console](images/console.png)
 
 5 - Open the build and click on "Cucumber Report"
 => You can see a visual report :
 
-![cucumber](https://bitbucket.org/automationteamaltea/pocvscodecypresscucumber/raw/master/images/cucumber-report.png)
+![cucumber report](images/cucumber-report.png)
 
 
 ## Who do I talk to? ##

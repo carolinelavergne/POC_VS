@@ -6,7 +6,7 @@ This README would normally document whatever steps are necessary to write and ru
 
 Prerequisites are:
 
--  get Vs Code, cypress and cucumber : cf SETUP.md
+-  Get Vs Code, cypress and cucumber : cf SETUP.md
 
 ### Files and folders Organization ###
 
@@ -17,11 +17,11 @@ You can create as many files as you want.
 #### .js ####
 As you can see below, the organization of folders/files are important, like the names of folders and files
 
-![cucumber](https://bitbucket.org/automationteamaltea/pocvscodecypresscucumber/raw/master/images/organization.png)
+![organization](images/organization.png)
 
 For a folder named **POC1.feature** (in the folder POC cucumber), you need a folder **POC1** and inside this folder, the js entry point is a file name **POC1.js** (or any other .js file in the same path)
 
-![cucumber](https://bitbucket.org/automationteamaltea/pocvscodecypresscucumber/raw/master/images/POC1.png)
+![POC1](images/POC1.png)
 
 The js files contain the step definitions for the POC1.feature.
 
@@ -29,7 +29,7 @@ There is a way to create reusable step definitions by putting them in cypress/in
 Then, inside the main js, add the import : 
 
 ```
-	import common from '../common/common.js';
+		import common from '../common/common.js';
 ```
 
 ### How to write a test ###
@@ -102,7 +102,6 @@ By creating a file All.features, you can execute all tests in all .feature in on
 The file is empty, it's alright. 
 
 #### one file .js ####
-
 The js file contains the translation of Gherkins in javascript.
 First of all, in all .js files you need to make sure you either require/import the functions defining step definitions :
 
@@ -229,20 +228,20 @@ To save the last execution,
 
 Prerequisites are:
 
-- get jenkins installed : https://jenkins.io/download/thank-you-downloading-windows-installer-stable/
-- get a pipeline configured => SETUP.md
+- Get jenkins installed : https://jenkins.io/download/thank-you-downloading-windows-installer-stable/
+- Get a pipeline configured => SETUP.md
 
 1 - Go to http://localhost:8080/view/all/job/pocvscodecypresscucumber/ and launch a build
 
 2 - Open the build and click on "console output"
-=> you can see the build execution with tests :
+=> You can see the build execution with tests :
 
-![cucumber](https://bitbucket.org/automationteamaltea/pocvscodecypresscucumber/raw/master/images/console.png)
+![console](images/console.png)
 
 3 - Open the build and click on "Cucumber Report"
-=> you can see a visual report :
+=> You can see a visual report :
 
-![cucumber](https://bitbucket.org/automationteamaltea/pocvscodecypresscucumber/raw/master/images/cucumber-report.png)
+![cucumber report](images/cucumber-report.png)
 
 
 ## More information ##
