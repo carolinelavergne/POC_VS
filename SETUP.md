@@ -249,7 +249,7 @@ Click on download and restart jenkins
 
 - Select create a pipeline project
 
-- In Pipeline : select "pipeline script from SCM" (in your project, you have to create a file named Jenkinsfile)
+- In Pipeline : select "pipeline script from SCM" (in your project, a file named Jenkinsfile should be present, if not create it)
 
 The content of this file is jenkins step :
  ```
