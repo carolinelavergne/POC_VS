@@ -30,9 +30,7 @@ _________________________________________________________________
 
 #### Github ####
 1 - Get POC_VS project in local :
-
-On your desktop, do a rigth click and select "git bash here"
-Type one of these 2 commands (replace USERNAME by your account):
+On your desktop, do a right click and select "git bash here", type : 
 
 ```
 		git clone https://github.com/carolinelavergne/POC_VS.git
@@ -75,14 +73,12 @@ _________________________________________________________________
 
 2 - In github, create a new repository (POC_VS) *(only if this is a new repository)*
 
-3 - In Command Prompt [cmd], type :
+3 - On your desktop, do a right click and select "git bash here" and type
 
 ```
-		cd Desktop
 		git clone github_url
 ```
 => The project POC_VS is on your desktop, you can move the folder if you want
-
 
 #### VS code ####
 
