@@ -1,13 +1,9 @@
 # README #
 
 This README would normally document whatever steps are necessary to get your application up and running.
-This README describes how install a projet on vsCode with cypress/cucumber :
 
-- from scratch 
+This README describes how install a projet on vsCode with cypress/cucumber.
 
-- from an existing project
-
-To distinguish the two ways, each mandatory step will be specified as appropriate.
 
 ## What is this repository for? ##
 
@@ -18,33 +14,62 @@ To distinguish the two ways, each mandatory step will be specified as appropriat
 
 Prerequisites are:
 
-- a desktop with windows
+- A desktop with windows
 
-- get a vsCode application installed : https://code.visualstudio.com/download
+- Get a vsCode application installed : https://code.visualstudio.com/download (Windows - User Installer	- 64 bit)
 
-- get NodeJs installed : https://nodejs.org/en/download/
+- Get NodeJs installed : https://nodejs.org/en/download/ (Windows Installer (.msi) - 64 bit)
 
-- get git for windows : https://gitforwindows.org/
+- Get git for windows : https://gitforwindows.org/ (click on download)
 
 
-### Github ###
-*(only if you want a versining project)*
+The installation documentation is divided into two parts, depending on whether you install the project from scratch or if you start from the project available on github or bitbucket.
 
-*(only if from an existing project)* 
+### Installation from an existing project ###
+_________________________________________________________________
 
-1 - get POC_VS project in local :
+#### Github ####
+1 - Get POC_VS project in local :
 
-Create a folder on your desktop : POC_VS
-Do a rigth click and select "git bash here"
-Type (replace username by your account):
+On your desktop, do a rigth click and select "git bash here"
+Type one of this 2 commands (replace USERNAME by your account):
 
 ```
 		git clone https://github.com/carolinelavergne/POC_VS.git (gitHub)
-		git clone https://username@bitbucket.org/automationteamaltea/pocvscodecypresscucumber.git (bitbucket)
+		git clone https://USERNAME@bitbucket.org/automationteamaltea/pocvscodecypresscucumber.git (bitbucket)
+```
+=> The project POC_VS is on your desktop, you can move the folder if you want
+
+
+#### VS code ####
+Open vsCode, open the folder : [File > Open folder...] and select the folder POC_VS
+=> The project in vscode is connected to github.
+
+**Note : **
+You can pull, push, add files, commit and push ;) 
+
+
+#### Cypress ####
+*(If Cypress executable not found at : C:\Users\USERNAME\AppData\Local\Cypress\Cache\CYPRESS_VERSION\Cypress\Cypress.Exe)*
+
+1 - Install Cypress, in the terminal window [Terminal > New Terminal], type : 
+
+```
+		cd C:\[...]\POC_VS
+		npm install cypress --save-dev
 ```
 
 
-*(only if from scratch)* 
+#### Cucumber ####
+1 - Install cucumber : [Ctrl+shitf+P] and search for "Extensions: Install extensions" then for "Cucumber (Gherkin) Full Support" [VSCode Cucumber (Gherkin) Language Support + Format + Steps/PageObjects Autocomplete]
+
+
+
+### Installation from scratch ###
+_________________________________________________________________
+
+#### Github ####
+*(only if you want a versioning project)*
 
 1 - In github, create an account : https://github.com/ *(only if you don't have one)*
 
@@ -56,41 +81,35 @@ Type (replace username by your account):
 		cd Desktop
 		git clone github_url
 ```
-=> The repository POC_VS is on your local
+=> The project POC_VS is on your desktop, you can move the folder if you want
 
-### VS code ###
+
+#### VS code ####
 
 Open vsCode, open the folder : [File > Open folder...] and select the folder POC_VS *(if you skip the Github part, you have to create a folder named POC_VS)*
-
-*(only if from scratch)* : the project is empty
-
-=> The project in vscode is connected to github.
+=> The project in vscode is empty 
+=> The project is connected to github *(if you did not skip the Github part)*
 
 **Note : **
 You can pull, push, add files, commit and push ;) 
 
 
-### Cypress ###
-
-*(All this part "Cypress" is only if from scratch)*
-
+#### Cypress ####
 1 - Install Cypress, in the terminal window [Terminal > New Terminal], type : 
 
 ```
-		cd C:\Users\Caroline\Desktop\POC_VS
 		npm install cypress --save-dev
 ```
+=> A package-lock.json file and node_modules folder are created
 
-=> a package-lock.json file and node_modules folder are created
-
-2 - Then, in the terminal window, type : 
+2 - In the terminal window, type : 
 
 ```
-	npm init
+		npm init
 ```
 Information are necessary to initialize package.json but can be edited later. Don't panic and type what you want. 
 
-=> a package.json and cypress.json files and cypress folder are created
+=> A package.json and cypress.json files and cypress folder are created
 
 3 - Update the package.json file with this content :
 ```
@@ -110,9 +129,9 @@ Information are necessary to initialize package.json but can be edited later. Do
 ```
 
 4 - Inside the folder POC_VS [POC_VS] :
-- create a folder .vscode
-- create settings.json file inside this folder
-- update the settings.json file with this content :
+- Create a folder .vscode
+- Create settings.json file inside this folder
+- Update the settings.json file with this content :
 ```
 	{
 		"cucumberautocomplete.steps": [
@@ -131,16 +150,13 @@ In the terminal window, type :
 ```
 		npm start
 ```
+=> All js files contained in the integration folder will be retrieved. 
 
-All js files contained in the integration folder will be retrieved. 
-Click on the file in which you want to run the tests, the test is running.
+5 - Click on the file in which you want to run the tests, the test is running.
 
 
-### Cucumber ###
-
-1 - Install cucumber : [Ctrl+shitf+P] and search for "install extension" then for "Cucumber (Gherkin) Full Support"
-
-*(All these parts are only if from scratch : 2 -> 6)*
+#### Cucumber ####
+1 - Install cucumber : [Ctrl+shitf+P] and search for "Extensions: Install extensions" then for "Cucumber (Gherkin) Full Support"
 
 2 - Install cypress-cucumber-preprocessor, in the terminal window, type : 
 
@@ -179,9 +195,9 @@ Click on the file in which you want to run the tests, the test is running.
 ```
 
 5 - Inside the folder integration [POC_VS > cypress > integration] :
-- create a folder POC1 
-- create a file POC1.js inside this folder ==> this file contains the js code to execute the test
-- create a file POC1.feature ==> this file contains the gherkins
+- Create a folder POC1 
+- Create a file POC1.js inside this folder ==> this file contains the js code to execute the test
+- Create a file POC1.feature ==> this file contains the gherkins
 (the names of the .feature file, the folder and the main .js file inside the folder are important to execute with succes the test)
 [to get example: https://bitbucket.org/automationteamaltea/pocvscodecypresscucumber/src/master/cypress/integration/POC cucumber/ : POC1/POC1.js and POC1.feature]
 
@@ -194,7 +210,9 @@ Click on the file in which you want to run the tests, the test is running.
 	};
 ```
 
+
 ### Execute Tests ###
+_________________________________________________________________
 
 1 - In the terminal window, type : 
 
@@ -202,11 +220,13 @@ Click on the file in which you want to run the tests, the test is running.
 		npm start
 ```
 
-=> a new window is opened with "POC1.feature" file.
+=> A new window is opened with "POC1.feature" file.
 
 2 - In this window, click on POC1.feature, the test is running.
 
+
 ### Jenkins ###
+_________________________________________________________________
 
 In jenkins : 
 1 - Go to http://localhost:8080/pluginManager/installed, check :
@@ -219,9 +239,9 @@ Click on download and restart jenkins
 
 2 - Go to http://localhost:8080/, create a new item :
 
-- name it "pocvscodecypresscucumber"
+- Name it "pocvscodecypresscucumber"
 
-- select create a pipeline project
+- Select create a pipeline project
 
 - In Pipeline : select "pipeline script from SCM" (in your project, you have to create a file named Jenkinsfile)
 
@@ -276,12 +296,12 @@ The content of this file is jenkins step :
 3 - Go to http://localhost:8080/view/all/job/pocvscodecypresscucumber/ and launch a build
 
 4 - Open the build and click on "console output"
-=> you can see the build execution with tests :
+=> You can see the build execution with tests :
 
 ![cucumber](https://bitbucket.org/automationteamaltea/pocvscodecypresscucumber/raw/master/images/console.png)
 
 5 - Open the build and click on "Cucumber Report"
-=> you can see a visual report :
+=> You can see a visual report :
 
 ![cucumber](https://bitbucket.org/automationteamaltea/pocvscodecypresscucumber/raw/master/images/cucumber-report.png)
 
