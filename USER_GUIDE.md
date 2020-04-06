@@ -225,6 +225,7 @@ To save the last execution,
 => After each execution, files POC1.cucumber.json and POC2.cucumber.json will be created with results
 
 #### Jenkins (Bonus) ####
+Jenkins is useful for obtaining the history of test runs.
 
 Prerequisites are:
 
