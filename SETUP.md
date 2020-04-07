@@ -237,6 +237,10 @@ In jenkins :
 
 - Cucumber reports
 
+- Github
+
+- Pipeline
+
 Click on download and restart jenkins
 
 2 - Go to http://localhost:8080/, create a new item :
@@ -265,7 +269,7 @@ The content of this file is jenkins step :
 						
 				stage("Test running") {
 					steps {
-						bat label: 'Run test', script: 'npm run start_all'
+						bat label: 'Run test', script: 'npm run start_ci'
 					}
 			
 					post {
@@ -291,11 +295,11 @@ The content of this file is jenkins step :
 		}
  ```
 
-- In CSM, select Git. Type the repository url : https://github.com/carolinelavergne/POC_VS.git (keep */master as branch and Jenkinsfile as script path)
+- In SCM, select Git. Type the repository url : https://github.com/carolinelavergne/POC_VS.git (keep */master as branch and Jenkinsfile as script path)
 
 - Save
 
-3 - Go to http://localhost:8080/view/all/job/pocvscodecypresscucumber/ and launch a build
+3 - Go to http://localhost:8080/view/all/job/pocvscodecypresscucumber/ and launch a build : Build Now
 
 4 - Open the build and click on "console output"
 => You can see the build execution with tests :

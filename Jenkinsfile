@@ -14,7 +14,7 @@ pipeline {
                 
         stage("Test running") {
             steps {
-                bat label: 'Run test', script: 'npm run start_all'
+                bat label: 'Run test', script: 'npm run start_ci'
             }
       
             post {
