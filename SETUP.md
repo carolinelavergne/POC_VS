@@ -229,6 +229,7 @@ _________________________________________________________________
 Prerequisites are:
 
 Get jenkins installed : https://jenkins.io/download/thank-you-downloading-windows-installer-stable/
+And the jenkins.xml [C:\Program Files (x86)\Jenkins] is updated with ```-Dfile.encoding=UTF8```in "<argument> 
 
 In jenkins : 
 1 - Go to http://localhost:8080/pluginManager/installed, check :
