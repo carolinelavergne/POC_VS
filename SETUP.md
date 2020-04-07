@@ -252,7 +252,7 @@ Click on download and restart jenkins
 - In Pipeline : select "pipeline script from SCM" (in your project, a file named Jenkinsfile should be present, if not create it)
 
 The content of this file is jenkins step :
- ```
+```
 		pipeline {
 			agent any
 			stages {
@@ -293,7 +293,7 @@ The content of this file is jenkins step :
 				}
 			}
 		}
- ```
+```
 
 - In SCM, select Git. Type the repository url : https://github.com/carolinelavergne/POC_VS.git (keep */master as branch and Jenkinsfile as script path)
 
