@@ -230,6 +230,9 @@ Prerequisites are:
 
 Get jenkins installed : https://jenkins.io/download/thank-you-downloading-windows-installer-stable/
 And the jenkins.xml [C:\Program Files (x86)\Jenkins] is updated with ```-Dfile.encoding=UTF8```in "<argument> 
+```
+		<arguments>-Xrs -Xmx256m -Dhudson.lifecycle=hudson.lifecycle.WindowsServiceLifecycle -Dfile.encoding=UTF8 -jar "%BASE%\jenkins.war" --httpPort=8080 --webroot="%BASE%\war"</arguments>
+```
 
 In jenkins : 
 1 - Go to http://localhost:8080/pluginManager/installed, check :
