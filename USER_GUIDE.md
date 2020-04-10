@@ -212,7 +212,47 @@ Usage: when you don't when to run all tests, put the tag @wip on the top of the 
 ==>  all tests with @wip tag in POC1.feature and POC2.feature are running.
 
 ### Reporting ###
-To save the last execution, 
+
+#### Cypress Dashboard ####
+To run a Cypress Launcher :
+
+1 - In the terminal window, type : 
+
+```
+		./node_modules/.bin/cypress open
+```
+
+2 - In this window, select "Runs", then "Set up project to record", then log in to dashboard
+=> a page on your browser will be opened : https://dashboard.cypress.io/test-runner-login
+
+3 - Log in with your github account, then go back to the Cypress Launcher where the login is successful
+
+4 - Finalize the setup
+=> All information to start your first run are given:
+
+```
+	To record your first run...
+	1. Check cypress.json file into source control. Why?
+		{
+			"projectId": "bvoddz"
+		}
+	2. Run this command now, or in CI. Need help?
+		cypress run --record --key c4478dac-eca5-47bc-9696-5056a4f1b2e2
+```
+In our case, the command is 
+```
+		"start_dashboard": "./node_modules/.bin/cypress run  --headless --record --browser chrome --key c4478dac-eca5-47bc-9696-5056a4f1b2e2 --spec 'cypress/integration/**/*.feature'"
+```
+This command can be add to the scripts in package.json.
+=> At the end of the run, a link with the recorded run is displayed: https://dashboard.cypress.io/projects/bvoddz/runs/1
+
+5 - Access to the recorded by clicking on the link (or this link : https://dashboard.cypress.io/projects/bvoddz/runs)
+=> you access to all executions with results, snapshots and videos
+
+#### Jenkins ####
+
+To save the last execution : 
+
 1 - In package.json, add in the object "cypress-cucumber-preprocessor" :
 ```   
     "cucumberJson": {
@@ -224,9 +264,7 @@ To save the last execution,
 ```
 => After each execution, files POC1.cucumber.json and POC2.cucumber.json will be created with results
 
-#### Jenkins (Bonus) ####
-Jenkins is useful for obtaining the history of test runs.
-
+Then use Jenkins for obtaining the history of test runs.
 Prerequisites are:
 
 - Get a pipeline configured => SETUP.md

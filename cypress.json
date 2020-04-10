@@ -1,6 +1,7 @@
 {
-    "integrationFolder": "cypress/integration",
-    "pluginsFile": "cypress/plugins/index.js",
-    "testFiles": "**/*.{feature,features}",
-    "chromeWebSecurity": false
+  "integrationFolder": "cypress/integration",
+  "pluginsFile": "cypress/plugins/index.js",
+  "testFiles": "**/*.{feature,features}",
+  "chromeWebSecurity": false,
+  "projectId": "bvoddz"
 }

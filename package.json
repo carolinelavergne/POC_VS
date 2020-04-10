@@ -20,6 +20,7 @@
     "start": "./node_modules/.bin/cypress open",
     "start_wip": "./node_modules/.bin/cypress run --headless --browser chrome -e TAGS=@wip --spec 'cypress/integration/**/*.feature'",
     "start_all": "./node_modules/.bin/cypress run --headless --browser chrome --spec 'cypress/integration/**/*.feature'",
+    "start_dashboard": "./node_modules/.bin/cypress run  --headless --record --browser chrome --key c4478dac-eca5-47bc-9696-5056a4f1b2e2 --spec 'cypress/integration/**/*.feature'",
     "start_ci": "./node_modules/.bin/cypress run --headless --browser chrome --spec 'cypress/integration/**/*.feature'"
   },
   "author": "yourName",
