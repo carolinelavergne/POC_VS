@@ -144,6 +144,46 @@ Then each Gherkins sentence has an associated js code :
 	});
 ```
 
+#### Stubbing ####
+Cypress enables you to stub a response and control the body, status, headers, or even delay.
+
+1 - Start a server to enable stubbing: 
+
+```
+	cy.server()
+```
+
+*Optional*
+2 - Load a fixture under the alias : 
+Fixture is used to load a fixed set of data located in a file. The formatting is determined by its file extension.
+In this example, files are json files.
+
+```
+		cy.fixture('karmen_total.json').as('karmenTotal');
+```
+==> Cypress searches for the file "karmen_total.json" within the fixturesFolder (which defaults to cypress/fixtures) and put the content under the alias karmenTotal. 
+
+If your fixtures are in an other folder, specified it under cypress.json : 
+```
+		"fixturesFolder": "PATH_TO_FIXTURES_FOLDER"
+```
+
+3 - Accessing Fixture Data :
+*(If you do step 2)*
+
+```
+		cy.route('GET', '/app/php/DatabaseGet.php?count=true&favorite=false&listChros=true&search=KARMEN', '@karmenTotal');
+```
+
+*(else)*
+
+```
+		 cy.route('GET', '/app/php/DatabaseGet.php?count=true&favorite=false&listChros=true&search=KARMEN', 'fixture:karmen_total.json');
+```
+
+==> When this api is called, the response always be the karmen_total.json content.
+
+
 ### How to run a test ###
 
 ```run``` : a video is recorded in /cypress/videos
@@ -239,7 +279,7 @@ To run a Cypress Launcher :
 	2. Run this command now, or in CI. Need help?
 		cypress run --record --key c4478dac-eca5-47bc-9696-5056a4f1b2e2
 ```
-In our case, the command is 
+In your case, the command is 
 ```
 		"start_dashboard": "./node_modules/.bin/cypress run  --headless --record --browser chrome --key c4478dac-eca5-47bc-9696-5056a4f1b2e2 --spec 'cypress/integration/**/*.feature'"
 ```
