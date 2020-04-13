@@ -144,10 +144,10 @@ Then each Gherkins sentence has an associated js code :
 	});
 ```
 
-#### Stubbing ####
-Cypress enables you to stub a response and control the body, status, headers, or even delay.
+#### Fixture ####
+Instead of writing a response inline you can automatically connect a response with a cy.fixture().
 
-1 - Start a server to enable stubbing: 
+1 - Start a server to begin routing responses to cy.route() and to change the behavior of network requests : 
 
 ```
 	cy.server()
@@ -178,7 +178,7 @@ If your fixtures are in an other folder, specified it under cypress.json :
 *(else)*
 
 ```
-		 cy.route('GET', '/app/php/DatabaseGet.php?count=true&favorite=false&listChros=true&search=KARMEN', 'fixture:karmen_total.json');
+		cy.route('GET', '/app/php/DatabaseGet.php?count=true&favorite=false&listChros=true&search=KARMEN', 'fixture:karmen_total.json');
 ```
 
 ==> When this api is called, the response always be the karmen_total.json content.
